@@ -55,17 +55,11 @@ class Robot:
 
     def rotate_left(self):
         if self.is_placed:
-            enum_value = self._direction.value - 1
-            if enum_value < 1:
-                enum_value = len(Direction)
-            self._direction = Direction(enum_value)
+            self._direction = self._direction.left
 
     def rotate_right(self):
         if self.is_placed:
-            enum_value = self._direction.value + 1
-            if enum_value > len(Direction):
-                enum_value = 1
-            self._direction = Direction(enum_value)
+            self._direction = self._direction.right
 
     def move(self):
         if self.is_placed:

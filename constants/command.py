@@ -1,12 +1,15 @@
-from enum import Enum
+from enum import Enum, auto
 
 
 class Command(Enum):
-    PLACE = "PLACE"
-    MOVE = "MOVE"
-    LEFT = "LEFT"
-    RIGHT = "RIGHT"
-    REPORT = "REPORT"
+    def _generate_next_value_(name, start, count, last_values):
+        return name
+
+    PLACE = auto()
+    MOVE = auto()
+    LEFT = auto()
+    RIGHT = auto()
+    REPORT = auto()
 
     @staticmethod
     def values():
