@@ -13,7 +13,7 @@ def validate_input(command_lines: List[str]) -> List[str]:
 
         if command == Command.PLACE.value:
             errors.extend(get_place_args_errors(args))
-        elif command in Command.values():
+        elif command in Command._member_names_:
             if args:
                 errors.append(f"{command} doesn't accept arguments. Received: {args}")
         else:

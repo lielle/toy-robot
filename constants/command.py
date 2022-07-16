@@ -10,7 +10,3 @@ class Command(Enum):
     LEFT = auto()
     RIGHT = auto()
     REPORT = auto()
-
-    @staticmethod
-    def values():
-        return [cmd.value for cmd in Command]
